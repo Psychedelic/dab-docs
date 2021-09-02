@@ -2,7 +2,7 @@
 date: "1"
 ---
 
-![](imgs/plug-welcome.png)
+![](imgs/index.png)
 
 Welcome to Plug's developer documentation. Learn how to integrate Plug into Internet Computer applications to provide **seamless onboardings and transactions with a user's Principal ID wallet**.
 
