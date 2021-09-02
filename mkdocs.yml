@@ -1,0 +1,61 @@
+site_name: "Documentation | Plug"
+site_author: plugwallet.ooo
+site_description: Plug is a browser crypto wallet extension that allows you to access your ICP, Cycles, and other tokens as well as log into IC apps with one click.
+site_url: https://docs.plugwallet.ooo/
+copyright: '© 2021 Built by Fleek'
+repo_name: psychedelic/plug
+repo_url: https://github.com/psychedelic/plug
+theme:
+  name: material
+  custom_dir: overrides
+  favicon: './imgs/favicon.ico'
+  logo: './imgs/logo.png'
+  font:
+    text: 'Open Sans'
+extra_css:
+  - 'stylesheets/extra.css'
+  - 'stylesheets/codehilite-theme.css'
+markdown_extensions:
+  - codehilite
+  - admonition
+  - attr_list
+  - meta
+  - toc:
+      permalink: true
+nav:
+  - Welcome to Plug 👋: index.md
+  - <b>Developer Guides</b> 🧰: "#"
+  - Getting Started: getting-started/connect-to-plug/#browser-extension
+  - Connect apps to Plug: getting-started/connect-to-plug/#requestconnectrequestconnectparams
+  - Using the PlugAgent: getting-started/connect-to-plug/#plug-agent-agent
+  - Querying Balances: getting-started/connect-to-plug/#requestbalance
+  - Triggering Transfers: getting-started/connect-to-plug/#requesttransferrequesttransferparams
+  - Authentication Button: getting-started/plug-button.md
+  - <b>Custom Assets in Plug</b> 🎨: "#"
+  - Custom Tokens (EXT): getting-started/custom-tokens.md
+  - Non-fungible Tokens (NFTs): getting-started/nfts.md
+  - <b>Build an App Examples</b> 💡: "#"
+  - Buy me a Coffee: build-an-app-examples/build-app-buy-me-a-coffee.md
+  - Plugged (E2E): build-an-app-examples/build-app-plugged.md
+  - NNS Stats: build-an-app-examples/plug-auth-nns.md
+  - Coinflip: "https://2ji5m-raaaa-aaaah-aanoa-cai.raw.ic0.app"  
+  - <b>Resources</b> 📚:
+    - Resource Library: resources/library.md
+    - Depositing Cycles: resources/buying-cycles.md
+    - Recovering Sub-accounts: resources/multiple-accounts.md    
+    - Migrating Curves: resources/migrating-curve.md
+    - Common Terms: common-terms/plug-dictionary.md  
+    - The Internet Computer: "https://dfinity.org/faq"
+    - Disclaimer: resources/disclaimer.md
+    - Trademark: resources/trademark.md
+    - Privacy: resources/privacy.md
+    - Our App Ecosystem 🌀: resources/apps-with-plug.md
+  - <b>FAQs</b> ❓: resources/faq.md
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/psychedelic/plug/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/plug_wallet
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/yVEcEzmrgm
