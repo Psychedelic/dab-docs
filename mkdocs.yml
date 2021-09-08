@@ -23,28 +23,23 @@ markdown_extensions:
   - toc:
       permalink: true
 nav:
-  - Welcome to DAB 👋: index.md
-  - <b>Developer Guides</b> 🧰: "#"
+  - <b>Welcome to DAB</b> 👋: "#"
+  - Overview: index.md
+  - <b>DAB's NFT List</b> 🎨: "#"
   - Getting Started: getting-started/connect-to-plug/#browser-extension
-  - Connect apps to Plug: getting-started/connect-to-plug/#requestconnectrequestconnectparams
-  - Using the PlugAgent: getting-started/connect-to-plug/#plug-agent-agent
-  - <b>Build an App Examples</b> 💡: "#"
-  - Buy me a Coffee: build-an-app-examples/build-app-buy-me-a-coffee.md
-  - Plugged (E2E): build-an-app-examples/build-app-plugged.md
-  - NNS Stats: build-an-app-examples/plug-auth-nns.md
-  - Coinflip: "https://2ji5m-raaaa-aaaah-aanoa-cai.raw.ic0.app"  
+  - Querying the list: getting-started/connect-to-plug/#requestconnectrequestconnectparams
+  - Using DAB-JS: getting-started/connect-to-plug/#plug-agent-agent
+  - <b>Coming Soon</b> 🎨: "#"
+  - Token List: getting-started/connect-to-plug/#requestconnectrequestconnectparams
+  - Canister List: getting-started/connect-to-plug/#plug-agent-agent
+  - Dapp List: getting-started/connect-to-plug/#plug-agent-agent  
+  - <b>Developer Tools</b> 💡: "#"
+  - DAB-JS Library: build-an-app-examples/build-app-buy-me-a-coffee.md
   - <b>Resources</b> 📚:
-    - Resource Library: resources/library.md
-    - Depositing Cycles: resources/buying-cycles.md
-    - Recovering Sub-accounts: resources/multiple-accounts.md    
-    - Migrating Curves: resources/migrating-curve.md
-    - Common Terms: common-terms/plug-dictionary.md  
     - The Internet Computer: "https://dfinity.org/faq"
     - Disclaimer: resources/disclaimer.md
     - Trademark: resources/trademark.md
     - Privacy: resources/privacy.md
-    - Our App Ecosystem 🌀: resources/apps-with-plug.md
-  - <b>FAQs</b> ❓: resources/faq.md
 extra:
   social:
     - icon: fontawesome/brands/github-alt
