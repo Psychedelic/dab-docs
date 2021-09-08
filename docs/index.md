@@ -4,52 +4,28 @@ date: "1"
 
 ![](imgs/index.png)
 
-Welcome to DAB's documentation.
+Welcome to DAB's documentation. DAB is an open internet service for canister, NFT, Token, and Dapp registries/lists any interface can consume, making assets and canisters easily discoverable, with metadata that makes them descriptive and human-readable, as well as quality assurance for risk reduction in the ecosystem (e.g reduce phishing).
 
 
-- Visit [our website](https://plugwallet.ooo) to get Plug's latest version.
-- Visit our community and jam with the team in our [Discord](https://discord.gg/yVEcEzmrgm)
-- Follow us on Twitter to stay updated with [Plug's development](https://twitter.com/plug_wallet).
-
-**Download Plug from browser stores or GitHub**
-- [Chrome & Chromium: Extension Store](https://chrome.google.com/webstore/detail/plug/cfbfdhimifdmdehjmkdobpcjfefblkjm)
-- [Firefox: Add-on Store](https://addons.mozilla.org/en-US/firefox/addon/plug/)
-- [GitHub: All Releases](https://github.com/Psychedelic/plug/releases)
+- Visit [our website](https://dab.ooo)
+- Visit [our main repository](https://github.com/psychedelic/dab)
+- Visit [DAB-js repository](https://github.com/psychedelic/dab-js)
 
 !!! Important
 
-    Plug is currently in Alpha V0.2.1, and is in active development. This version of Plug includes ICP wallet features, basic app-integration/interactions with the IC Provider API, and the PlugAgent for authentication and canister call signing. Consider Plug a hot wallet during its alpha stage, and feel free to contact us via Discord/Twitter to report any issues, enhancement ideas or bugs. Coming next? Cycles integration!
+    DAB is currently in its V0.1.0. This version includes the NFT list/registry only. The Token, Canister, and Dapp list services will follow soon after, but early applications for these lists are being collected (find the forms in the menu),
 
-## Migrating Wallet Funds from V0.2.0 to V0.2.1.
+## Getting Started with DAB
 
-**As of V0.2.1, Plug migrated its curve from Ed25519 to SECP256K1**. This means that the cryptographic curve used to import/create identities in Plug (e.g. the curve used to calculate your Principal ID from your seed phrase) is changing.
+Want to connect your app to **DAB's NFT list** to auto-surface NFT collections and easily integrate multiple assets and standards at once in your UI/app?
 
-**Users with a wallet created in Plug V0.2.0 or before need to create a new wallet in this Plug version and migrate their funds**, because they can’t import their old wallet (since the curve change, the seed phrase would output a different Principal ID/key pair).
+- [Check out our getting started guide for the NFT list.]()
+- [Get familiar with the DAB-JS library.]()
 
-[Here is a detailed guide on how to do it, and why we did this one-time change.](https://docs.plugwallet.ooo/resources/migrating-curve/)
+As a summary, to integrate DAB's NFT list you need to do two things. First, you will interact with the actual **DAB NFT List canister**, to query the available list and metadata. As of V0.1.0, you can:
 
-**If you had no funds in your Plug wallet yet, you can skip this process and just create a new wallet.**
+- Pull a list of NFT collections, and their Canister IDs
+- Show the project’s metadata (name, image, etc)
+- See the type of standard it uses (ICPunks, EXT, etc.) 
 
-
-## Plug's Repositories
-Review Plug's code, submit proposals, or submit issues for the team to review.
-
-- [Plug Extension](https://github.com/Psychedelic/plug)
-- [Plug Controller](https://github.com/Psychedelic/plug-controller)
-- [Plug Inpage Provider](https://github.com/Psychedelic/plug-inpage-provider)
-
-## Why Plug? What is different?
-Plug aims to solve several points of friction on the Internet Computer for both developers and users.
-
-**For users?** It means having one main wallet (your Principal ID) in your browser to manage all your assets (Cycles/ICP/tokens, NFT's, etc.) and to log into any IC app. No need to worry about having separate wallets for different apps and tokens, or having multiple identities per device/app (like you would when using Internet Identity).
-
-- Log into IC apps from your browser in one click using the same Principal ID.
-- Manage, send and receive all your IC assets from one place, with one ID.
-- Save contacts (aka name ID's) in a local storage address book. 
-
-
-**For developers?** It will help offer seamless web/app experiences on the Internet Computer, handling authentication and wallet connection for their users. The same experience a Dapp user would expect on Ethereum, but built for the Internet Computer.
-
-- Authenticate users, and their balances, in one click with just a Principal ID.
-- Trigger transfers or transaction requests to user's wallets from apps.
-- Query and display a user's balances in the app.
+The second step is to use the **DAB JS library** to make calls to these NFTs (transfer, etc.) This library, in a nutshell, is a wrapper that provides the necessary tools/methods to interact with the different standards and collections available in DAB.
