@@ -1,6 +1,6 @@
-# Plug Documentation
+# DAB Documentation
 
-Welcome [Plug's](https://plugwallet.ooo/) documentation! Plug is a browser extension for users of the Internet Computer that allows you to access your ICP, Cycles, and other tokens as well as log into IC apps with one click. This documentation will help you get started using Plug, or integrate it to your Internet Computer application.
+Welcome [DAB's](https://dab.ooo/) documentation! All the data an IC app needs to make a seamless experience, accessible directly on the IC. DAB is an open internet service for NFT, Token, Canister, and Dapp registries.
 
 ## Getting started
 

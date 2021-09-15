@@ -4,7 +4,7 @@ date: "1"
 
 # Privacy Policy
 
-DAB is an open internet service for canister, NFT, Token, and Dapp registries/lists any interface can consume, making assets and canisters easily discoverable, with metadata that makes them descriptive and human-readable, as well as quality assurance for risk reduction in the ecosystem (e.g reduce phishing).
+DAB is an open internet service for canister, NFT, Token, and Dapp registries/lists any interface can consume, making assets and canisters easily discoverable, with metadata that makes them descriptive and human-readable.
 
 Its usage **doesn’t imply in any way the collection, processing, usage, or request of personally identifiable information** from its users. It is the user’s responsibility to control, decide, and manage what personal information they will share when interfacing with the Internet Computer through DAB, as DAB doesn’t require any to function, request it in any way, or has access/control over it.
 

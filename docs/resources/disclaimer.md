@@ -4,7 +4,7 @@ date: "1"
 
 # Legal Disclaimer
 
-DAB is an open internet service for canister, NFT, Token, and Dapp registries/lists any interface can consume, making assets and canisters easily discoverable, with metadata that makes them descriptive and human-readable, as well as quality assurance for risk reduction in the ecosystem (e.g reduce phishing).
+DAB is an open internet service for canister, NFT, Token, and Dapp registries/lists any interface can consume, making assets and canisters easily discoverable, with metadata that makes them descriptive and human-readable.
 
 DAB is provided “as is”, and utilized at your own risk and responsibility without warranties. Despite DAB having been developed by Fleek LLC, the project is thought to be a community collaboration project, using open technologies and protocols (Internet Computer and Dank, for example) as the backbone of its functionalities.
 
