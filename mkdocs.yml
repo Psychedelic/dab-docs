@@ -26,15 +26,19 @@ nav:
   - <b>Welcome to DAB</b> 👋: "#"
   - Overview: index.md
   - <b>DAB's NFT List</b> 🎨: "#"
-  - Getting Started: getting-started/connect-to-plug/#browser-extension
-  - Querying the list: getting-started/connect-to-plug/#requestconnectrequestconnectparams
-  - Using DAB-JS: getting-started/connect-to-plug/#plug-agent-agent
-  - <b>Coming Soon</b> 🎨: "#"
-  - Token List: getting-started/connect-to-plug/#requestconnectrequestconnectparams
-  - Canister List: getting-started/connect-to-plug/#plug-agent-agent
-  - Dapp List: getting-started/connect-to-plug/#plug-agent-agent  
+  - Getting Started: nft-list/getting-started.md
+  - Setting up DAB-js: nft-list/getting-started/#md
+  - Fetching a User's NFTs: nft-list/getting-started/#md
+  - Triggering an NFT Transfer: nft-list/getting-started/#md
+  - Submit an NFT to the list: "https://dab-ooo.typeform.com/nft-list"
+  - Current NFT List: "https://github.com/Psychedelic/dab/"
+  - <b>Coming Soon - Early Submissions</b> 📣: "#"
+  - Token List: "https://dab-ooo.typeform.com/token-list"
+  - Canister List: "https://dab-ooo.typeform.com/canister-list"
+  - Dapp List: "https://dab-ooo.typeform.com/dapp-list"  
   - <b>Developer Tools</b> 💡: "#"
-  - DAB-JS Library: build-an-app-examples/build-app-buy-me-a-coffee.md
+  - DAB-JS Library: https://github.com/Psychedelic/DAB-js/
+  - Main DAB Repo: https://github.com/Psychedelic/DAB/
   - <b>Resources</b> 📚:
     - The Internet Computer: "https://dfinity.org/faq"
     - Disclaimer: resources/disclaimer.md
@@ -43,8 +47,8 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/psychedelic/plug/
+      link: https://github.com/psychedelic/dab/
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/plug_wallet
+      link: https://twitter.com/dab_ooo
     - icon: fontawesome/brands/discord
       link: https://discord.gg/yVEcEzmrgm
