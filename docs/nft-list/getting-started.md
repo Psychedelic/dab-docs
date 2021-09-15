@@ -30,7 +30,7 @@ Or via the package.json:
 "@psychedelic/dab-js": "0.1.6"
 ```
 
-## 2. 🎨 Fetching All NFTs the User Owns (getAllUserNFTs method)
+## 2. 🎨 Fetching All NFTs the User Owns (getAllUserNFTs)
 
 In this step, you will use the getAllUserNFTs method to get an array with all the NFTs (and their details) the user (a Principal ID) owns. 
 
