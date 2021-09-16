@@ -40,7 +40,7 @@ To interact with DAB's services you need to use the DAB-js library. Read our doc
 ### 🖌️ Current NFT List & Making New Submissions
 You can see the current listed NFT collections in the link below. **Want to submit a new NFT collection to the list? Use the form below.**
 
-- [View the current NFT Collection List📜](registries\nft\Cargo.toml)
+- [View the current NFT Collection List📜](https://github.com/Psychedelic/dab/blob/main/registries/nft/list.json)
 - [Submit a new NFT to the list 📫](https://dab-ooo.typeform.com/nft-list)
 
 

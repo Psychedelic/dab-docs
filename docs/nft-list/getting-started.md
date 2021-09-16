@@ -65,6 +65,8 @@ const getAllUserNFTs = async (
   name: string;
   canisterId: string;
   standard: string;
+  icon: string;
+  description: string;
   tokens: Array<{
     index: bigint;
     canister: string;
@@ -97,6 +99,8 @@ interface NFTCollection {
   canisterId: string;
   standard: string;
   tokens: NFTDetails[];
+  icon: string;
+  description: string;
 }
 
 const getAllUserNFTs = async (
