@@ -105,6 +105,6 @@ const getAllUserNFTs = async (
 ): Promise<NFTCollection[]>
 ```
 
-## 3. 🌯 Triggering a Transfer for an NFT (transfer method)
+## 3. 🌯 Triggering a Transfer for an NFT (transfer)
 
 (pending)
