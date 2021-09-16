@@ -169,8 +169,8 @@ This method allows you to fetch an array with the details of all the tokens a us
 Here, you would need to pass:
 
 - `principal`: a str of the user's Principal ID you want to check for owned NFTs.
-- `canisterID`: the collection's canisterId to instantiate the actor.
-- `standard`: a str with the name of the NFT standard to instantiate the actor.
+
+> (See that in the variable NFTActor, we are instantiating the NFT actor object, passing a canisterID for the collection we want to interact with, an agent, and the name of the standard as a str).
 
 ```js
 
@@ -211,7 +211,8 @@ In this method you need to pass:
 
 - `to`: a str of a Principal ID for the destination address.
 - `index`: the index number of the NFT to be transferred.
-- `canisterID`: the collection's canisterId to instantiate the actor.
+
+> (See that in the variable NFTActor, we are instantiating the NFT actor object, passing a canisterID for the collection we want to interact with, an agent, and the name of the standard as a str).
 
 ```js
 import { Principal } from '@dfinity/principal';
@@ -221,8 +222,9 @@ import { getNFTActor } from '@psychedelic/dab-js'
 const sendNFT = async () => {
   const to = 'r4rmh-mbkzp-gv2na-yvly3-zcp3r-ocllf-pt3p3-zsri5-6gqvr-stvs2-4ae';
   const index = 5;
+  const standard = 'ICPunks'
   const canisterId = 'qcg3w-tyaaa-aaaah-qakea-cai';
-  const NFTActor = getNFTActor(canisterId, agent, 'ICPunks');
+  const NFTActor = getNFTActor(canisterId, agent, standard);
   await NFTActor.transfer(Principal.fromText(to), index);
 }
 sendNFT();
@@ -237,8 +239,9 @@ This method allows you to fetch an array with the details and metadata of any as
 In this method, you need to pass:
 
 - `tokenIndex`: the index number for the token in the collection you want the details of.
-- `canisterID`: the collection's canisterId to instantiate the actor.
-- `standard`: a str with the name of the NFT standard to instantiate the actor.
+
+> (See that in the variable NFTActor, we are instantiating the NFT actor object, passing a canisterID for the collection we want to interact with, an agent, and the name of the standard as a str).
+
 
 
 ```js
