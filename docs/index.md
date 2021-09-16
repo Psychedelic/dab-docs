@@ -1,8 +1,9 @@
 ---
 date: "1"
 ---
+# Welcome to DAB 👋
 
-![](https://camo.githubusercontent.com/a010a20da0ed470d119b0c21187b062d76853f121fd35c3b8f1391a9997fdcf1/68747470733a2f2f73746f726167656170692e666c65656b2e636f2f6e69636f706f6767692d7465616d2d6275636b65742f6461622d67682532302831292e706e67)
+![](imgs/main.png)
 
 Welcome to DAB's documentation. DAB is an open internet service for data on the IC. All the data an IC app needs to make a seamless experience, accessible directly on the IC. DAB is an open internet service for NFT, Token, Canister, and Dapp registries.
 
@@ -14,7 +15,7 @@ Welcome to DAB's documentation. DAB is an open internet service for data on the 
 
 !!! Important
 
-    DAB is currently in its V0.1.0. This version includes the NFT list/registry only. The Token, Canister, and Dapp list services will follow soon after, but early applications for these lists are being collected (find the forms in the menu)
+    DAB is currently in its V0.1.0. This version includes the NFT list/registry only. The Token, Canister, and Dapp list services will follow soon after, but early applications for these lists are still being collected (find the forms in the menu)
 
 ## 🎨 V0.1.0 - The NFT List
 
@@ -41,3 +42,11 @@ You can see the current listed NFT collections in the link below. **Want to subm
 
 - [View the current NFT Collection List📜](registries\nft\Cargo.toml)
 - [Submit a new NFT to the list 📫](https://dab-ooo.typeform.com/nft-list)
+
+
+## 📬 Coming Next: Token, Canister, and Dapp lists (Early Applications)
+After V0.1.0, we'll be working on token, canister, and Dapp registries. These are still in development, **but we are receiving early submissions to be added to these lists on release**.
+
+- [Token List](https://dab-ooo.typeform.com/token-list)
+- [Canister List](https://dab-ooo.typeform.com/canister-list)
+- [Dapp List](https://dab-ooo.typeform.com/dapp-list)

@@ -2,7 +2,7 @@ site_name: "Documentation | DAB"
 site_author: dab.ooo
 site_description: All the data an IC app needs to make seamless experiences, accessible directly on the IC. Canister, NFT, Token, and Dapp registries & lists.
 site_url: https://docs.plugwallet.ooo/
-copyright: '© 2021 Built by Fleek'
+copyright: '© 2021 Built by Fleek LLC'
 repo_name: psychedelic/dab
 repo_url: https://github.com/psychedelic/dab
 theme:
@@ -23,21 +23,17 @@ markdown_extensions:
   - toc:
       permalink: true
 nav:
-  - Welcome to DAB 👋: "#"
+  - Welcome to DAB 👋: index.md
   - <b>DAB's NFT List</b> 🎨: "#"
   - Getting Started: nft-list/getting-started.md
   - Fetching a User's NFTs: nft-list/getting-started/#2-fetching-all-nfts-the-user-owns-getallusernfts
   - Triggering an NFT Transfer: nft-list/getting-started/#3-triggering-a-transfer-for-an-nft-transfer
-  - <b>Coming Soon - Lists</b> 📣:
-    - Token List: "https://dab-ooo.typeform.com/token-list"
-    - Canister List: "https://dab-ooo.typeform.com/canister-list"
-    - Dapp List: "https://dab-ooo.typeform.com/dapp-list"  
+  - Current NFT List: "https://github.com/Psychedelic/dab/"
+  - Submit an NFT: "https://dab-ooo.typeform.com/nft-list"  
   - <b>Developer Tools</b> 💡: "#"
   - DAB-JS Library: https://github.com/Psychedelic/DAB-js/
   - Main DAB Repo: https://github.com/Psychedelic/DAB/
   - <b>Resources</b> 📚:
-    - NFT List Submissions: "https://dab-ooo.typeform.com/nft-list"
-    - Current NFT List: "https://github.com/Psychedelic/dab/"
     - The Internet Computer: "https://dfinity.org/faq"
     - Disclaimer: resources/disclaimer.md
     - Trademark: resources/trademark.md
