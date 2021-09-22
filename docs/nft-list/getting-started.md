@@ -47,6 +47,8 @@ npm install @psychedelic/dab-js@latest
 ```
 
 Find more details about installing versions in the package page [here](https://github.com/Psychedelic/DAB-js/packages/987540)
+
+
 ---
 
 ## 2. 🎨 Fetching All NFTs the User Owns (getAllUserNFTs)
