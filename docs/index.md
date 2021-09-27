@@ -27,7 +27,7 @@ In its first iteration, we have released DAB's first registry, **the NFT list** 
 
 DAB's NFT list is **standard agnostic** and through the DAB-js library, developers can easily integrate and make calls to any NFT collection on the list regardless of their NFT standard interface (EXT, Departure Labs, etc.), **because in its library DAB wraps all standards into a common javascript interface**.
 
-### 🧰 Getting Started with DAB - NFT List
+### 🧰 Getting Started with DAB - the NFT List
 
 Want to connect your app to **DAB's NFT list** to auto-surface a user's NFT collections and easily integrate multiple assets and standards at once in your UI/app?
 
