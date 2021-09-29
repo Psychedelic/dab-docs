@@ -6,7 +6,6 @@ date: "1"
 
 ![](https://storageapi.fleek.co/fleek-team-bucket/canregistry.png)
 
-
 Ready to integrate the Canister List to surface metadata for Canister IDs in your UI/App? All right!
 
 Just like using the NFT List, you will need to use the **[DAB-js library](https://github.com/Psychedelic/DAB-js/)**, which we built to provide a simple plug-n-play way of integrating **all of DAB's registries**. With it, you will:
@@ -43,7 +42,7 @@ You can also setup your npm global settings to fetch from the Github registry ev
 
 First, you need to install the DAB-js **npm package** into your project.
 
-You can do so from the command line:
+You can do so from the command line
 ```js
 npm install @psychedelic/dab-js@latest
 ```
