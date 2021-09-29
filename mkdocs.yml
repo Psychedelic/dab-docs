@@ -32,7 +32,8 @@ nav:
   - Submit an NFT: "https://dab-ooo.typeform.com/nft-list"  
   - <b>The Canister List</b> 🛢️: "#"
   - Getting Started: canister-list/getting-started.md
-  - Querying Metadata: canister-list/getting-started.md
+  - Single-canister Query: canister-list/getting-started/#2-check-a-single-canisters-metadata-in-the-registry-getcanisterinfo
+  - Multi-canister Query: canister-list/getting-started/#3-check-multiple-canisters-metadata-in-the-registry-getmultiplecanisterinfo
   - Submit a Canister: "https://dab-ooo.typeform.com/canister-list"    
   - <b>Developer Tools</b> 💡: "#"
   - DAB-JS Library: https://github.com/Psychedelic/DAB-js/

@@ -63,7 +63,7 @@ Apps that show Canister IDs in their UIs/apps can **integrate to the Canister Li
 - It helps give users information to judge whether to trust a canister or not
 - It can help in the future to identify duplicates or impersonations.
 
-[**View the Canister Registry Source Code**](registries/canister_registry/)
+[**View the Canister Registry Source Code**](https://github.com/Psychedelic/dab/tree/main/registries/canister_registry)
 
 ### 🖌️ Submitting/Adding a Canister ID to the Canister List
 
