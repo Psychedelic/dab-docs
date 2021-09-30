@@ -69,7 +69,8 @@ Apps that show Canister IDs in their UIs/apps can **integrate to the Canister Li
 
 Want to submit a new Canister ID to the registry to associate metadat to it, and have integrated apps auto-surface it? Use the form below.
 
-* [**Submit a new Canister to the list 📫**](https://dab-ooo.typeform.com/canister-list)
+- [**Current List**](https://github.com/Psychedelic/dab/blob/main/registries/canister_registry/list.md)
+- [**Submit a new Canister to the list 📫**](https://dab-ooo.typeform.com/canister-list)
 
 For V0.2.0, the review process for submissions is manual and done by the DAB core team; in the future we will automate the process, and migrate to a community-governed and trustless system.
 
