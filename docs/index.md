@@ -26,8 +26,6 @@ In v0.2.0, DAB has two registries that developers can integrate with, or submit 
 
 ## 🎨 The NFT List
 
-![](https://storageapi.fleek.co/nicopoggi-team-bucket/dab-gh-nft.png)
-
 **The NFT list** DAB provides a list of NFTs that apps & developers can **consume to surface new NFTs as they are listed in DAB, instead of manually adding them one by one**.
 
 DAB's NFT list is **standard agnostic** and through the DAB-js library, developers can easily integrate and make calls to any NFT collection on the list regardless of their NFT standard interface (EXT, Departure Labs, etc.), **because in its library DAB wraps all standards into a common javascript interface**.
@@ -52,8 +50,6 @@ You can see the current listed NFT collections in the link below. **Want to subm
 
 
 ## 🛢️ The Canister List
-
-![](https://storageapi.fleek.co/fleek-team-bucket/canregistry.png)
 
 **The Canister List** is a canister registry where you can associate Canister IDs to a metadata profile (name, front-end URL, description, logo...) to make them more discoverable by UIs. 
 

@@ -4,8 +4,6 @@ date: "1"
 
 # 🖌️ Getting Started - Integrate the NFT List
 
-![](imgs/dab-gh-nft.png)
-
 
 All right! Ready to integrate DAB's NFT list into your app? Your main point of interaction for interacting with DAB is the **[DAB-js library](https://github.com/Psychedelic/DAB-js/)**, which we built to provide a simple plug-n-play way of integrating DAB. With it, you will:
 
