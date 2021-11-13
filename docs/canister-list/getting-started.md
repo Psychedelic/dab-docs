@@ -15,6 +15,8 @@ Just like using the NFT List, you will need to use the **[DAB-js library](https:
 
 **Remember**, with DAB, you will check if the Canister ID you're querying has associated metadata; if the canister's controller hasn't added the Canister ID and its metadata to the Canister List yet, it won't return information. [Canister controllers can submit new canisters here](https://dab-ooo.typeform.com/canister-list)
 
+> The mainnet canister ID for DAB's Canister list is: `qxtlu-aiaaa-aaaah-aaupq-cai`
+
 ---
 ## 0. ⚙️ Preparing your environment
 
