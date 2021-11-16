@@ -58,6 +58,7 @@ In this step, you will use the getAllUserNFTs method to get an array with all th
 Here, DAB takes the identity you pass, and checks in every NFT collection currently on the DAB list (ICPunks, Starverse, etc...) for the individual assets the user owns (Punk#1230).
 
 You need to pass:
+
 - `agent`: An agent (an Http agent, instantiated with agent-js or Plug) <optional>
 - `user`: A Principal object (a user's Principal ID instantiated as a principal object)
 
