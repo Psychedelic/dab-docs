@@ -58,8 +58,8 @@ In this step, you will use the getAllUserNFTs method to get an array with all th
 Here, DAB takes the identity you pass, and checks in every NFT collection currently on the DAB list (ICPunks, Starverse, etc...) for the individual assets the user owns (Punk#1230).
 
 You need to pass:
-- An agent (an Http agent, instantiated with agent-js or Plug)
-- A Principal object (a user's Principal ID instantiated as a principal object)
+- `agent`: An agent (an Http agent, instantiated with agent-js or Plug) <optional>
+- `user`: A Principal object (a user's Principal ID instantiated as a principal object)
 
 ```js
 import { Principal } from '@dfinity/principal';
@@ -68,8 +68,7 @@ import { getAllUserNFTs } from '@psychedelic/dab-js'
 const getNFTCollections = async () => {
   const principal = 'r4rmh-mbkzp-gv2na-yvly3-zcp3r-ocllf-pt3p3-zsri5-6gqvr-stvs2-4ae';
   const collections = await getAllUserNFTs(
-    agent,
-    Principal.fromText(principal)
+    { user: Principal.fromText(principal) }
   );
 }
 getNFTCollections();
@@ -146,11 +145,11 @@ To interact with the user's NFTs and, for example, trigger a transfer, you need 
 ```js
 import { getAllUserNFTs } from '@psychedelic/dab-js'
 
-export const getNFTActor = (
+export const getNFTActor = ({
   canisterId: string,
   agent: HttpAgent,
   standard: string
-): NFT => {
+}): NFT => {
   return new NFT_STANDARDS[standard](canisterId, agent);
 };
 ```

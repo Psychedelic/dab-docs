@@ -59,14 +59,13 @@ Find more details about installing versions in the package page [here](https://g
 This method allows you to query the DAB canister registry to fetch the metadata for a **specific Canister ID**. You will need to pass:
 
 - `canisterID`: the Canister ID of the canister you want to check in DAB.
-- `agent`: and HttpAgent (instantiated with agent-js or Plug)
+- `agent`: an HttpAgent (instantiated with agent-js or Plug) <optional>
 
 
 ```ts
 import { getCanisterInfo } from '@psychedelic/dab-js';
-const agent = new HttpAgent();
 const nnsCanisterId = 'ryjl3-tyaaa-aaaaa-aaaba-cai';
-const nnsMetadata = await getCanisterInfo(nnsCanisterId, agent);
+const nnsMetadata = await getCanisterInfo({ canisterId: nnsCanisterId });
 console.log(nnsMetadata);
 ```
 
@@ -89,14 +88,13 @@ interface CanisterMetadata {
 This second method is a variation that allows you to query DAB to check the metadata of **multiple canisters at once**. The main differences is that you will pass:
 
 - `canisterIDs`: An array of **several canister IDs** of the canisters you want to check in DAB.
-- `agent`: and HttpAgent (instantiated with agent-js or Plug).
+- `agent`: and HttpAgent (instantiated with agent-js or Plug). <optional>
 
 ```ts
 import { getMultipleCanisterInfo } from '@psychedelic/dab-js';
 
-const agent = HttpAgent();
 const canisterIds = ['e3izy-jiaaa-aaaah-qacbq-cai', 'qcg3w-tyaaa-aaaah-qakea-cai']; // Cronic + ICPunks
-const nftsInfo = await getMultipleCanisterInfoFromDab(canisterIds, agent);
+const nftsInfo = await getMultipleCanisterInfoFromDab({ canisterIds });
 console.log(nftsInfo);
 ```
 
