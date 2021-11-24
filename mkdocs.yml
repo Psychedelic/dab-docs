@@ -24,6 +24,7 @@ markdown_extensions:
       permalink: true
 nav:
   - Welcome to DAB 👋: index.md
+  - Why use DAB? 🤔: resources/why-dab.md
   - <b>The NFT List</b> 🎨: "#"
   - Getting Started: nft-list/getting-started.md
   - Fetching a User's NFTs: nft-list/getting-started/#2-fetching-all-nfts-the-user-owns-getallusernfts
