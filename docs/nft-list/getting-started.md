@@ -33,9 +33,18 @@ npm login --registry=https://npm.pkg.github.com --scope=@Psychedelic
 > **Note:** You only need to configure this once to install the package!
     On npm login provide your Github email as your username and the Personal access token as the password.
 
-You can also setup your npm global settings to fetch from the Github registry everytime it finds a **@Psychdelic** package, find the instructions [here](https://docs.npmjs.com/configuring-your-registry-settings-as-an-npm-enterprise-user).
+You can also setup your npm global settings to fetch from the Github registry everytime it finds a **@Psychdelic** package:
 
-⚠️ Alternatively, a token could be passed to the `.npmrc` as `//npm.pkg.github.com/:_authToken=xxxxxx` but we'd like to keep it clean and tokenless.
+```sh
+npm set //npm.pkg.github.com/:_authToken "$PAT"
+```
+
+⚠️ Alternatively, a token could be passed to the `.npmrc` as `//npm.pkg.github.com/:_authToken=xxxxxx` but we'd like to keep it clean, tokenless. Here's an example where the `PAT` is an environment variable:
+
+```sh
+@psychedelic:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${PAT}
+```
 
 ## 1. 🧰 Setting up DAB-js in your project
 
