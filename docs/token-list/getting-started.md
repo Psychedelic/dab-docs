@@ -2,17 +2,17 @@
 date: "1"
 ---
 
-# 🖌️ Getting Started - Integrate the NFT List
+#   💠 Getting Started - Integrate the Token List
 
 
-All right! Ready to integrate DAB's NFT list into your app? Your main point of interaction for interacting with DAB is the **[DAB-js library](https://github.com/Psychedelic/DAB-js/)**, which we built to provide a simple plug-n-play way of integrating DAB. With it, you will:
+All right! Ready to integrate DAB's Token list into your app? Your main point of interaction for interacting with DAB is the **[DAB-js library](https://github.com/Psychedelic/DAB-js/)**, which we built to provide a simple plug-n-play way of integrating DAB. With it, you will:
 
-1. Query DAB's NFT Collection List to get an Array of the NFTs a user (Principal) owns.
-2. Use the DAB-js standard interface wrapper to interact with listed collections (transfer, check a user's owned nfts, get details, etc.)
+1. Query DAB's Token List to get an Array of the Tokens a user (Principal) owns.
+2. Use the DAB-js standard interface wrapper to interact with listed assets (transfer, check a user's owned tokens,  details, etc.)
 
-**Let's do a double click on that last point**. The list is standard-agnostic, meaning NFT collections from different NFT standards are available (ICPunks, EXT standard, etc.). To facilitate your integration to them, the **DAB-js library wraps all of the standards listed in DAB** into a **common javascript interface**. Instead of calling different methods, depending on the standard, you use DAB's common interface, and let DAB translate the calls.
+**Let's do a double click on that last point**. The list is standard-agnostic, meaning Tokens from different standards are available (DIP20, EXT.). To facilitate your integration to them, the **DAB-js library wraps all of the standards listed in DAB** into a **common javascript interface**. Instead of calling different methods, depending on the standard, you use DAB's common interface, and let DAB translate the calls.
 
-> The mainnet canister ID for DAB's NFT list is: `aipdg-waaaa-aaaah-aaq5q-cai`
+> The mainnet canister ID for DAB's Token list is: `aipdg-waaaa-aaaah-aaq5q-cai`
 
 ---
 ## 0. ⚙️ Preparing your environment
@@ -60,11 +60,11 @@ Find more details about installing versions in the package page [here](https://g
 
 ---
 
-## 2. 🎨 Fetching All NFTs the User Owns (getAllUserNFTs)
+## 2. 💠 Fetching All Tokens the User Owns (getAllUserTokens)
 
-In this step, you will use the getAllUserNFTs method to get an array with all the NFTs (and their details) the user (a Principal ID) owns. 
+In this step, you will use the getAllUserTokens method to get an array with all the Tokens (and their details) the user (a Principal ID) owns. 
 
-Here, DAB takes the identity you pass, and checks in every NFT collection currently on the DAB list (ICPunks, Starverse, etc...) for the individual assets the user owns (Punk#1230).
+Here, DAB takes the identity you pass, and checks in every token currently on the DAB list (XTC, WICP...) for the individual assets the user owns (e.g. 1 XTC).
 
 You need to pass:
 
@@ -84,9 +84,9 @@ const getNFTCollections = async () => {
 getNFTCollections();
 ```
 
-This call will return an array that includes an NFTCollection interface with the details of each NFT Collection where a user owns an NFT (name, canister id, standard, tokens).
+This call will return an array that includes an interface with the details of each token where a user owns a balance (name, canister id, standard, tokens).
 
-Inside that interface the **tokens object** includes an array with each individual NFT the user owns in the collection (e.g Punk#), and its details (index, canister, id, name, url, metadata, standard, collection). This is **all the data you need to surface in the UI for your user.**
+Inside that interface the **tokens object** includes an array with each individual asset, and its details (index, canister, id, name, url, metadata, standard). This is **all the data you need to surface in the UI for your user.**
 
 ```js
 const getAllUserNFTs = async (
@@ -142,15 +142,15 @@ const getAllUserNFTs = async (
 
 ---
 
-## 3. 🌯 Interacting with NFTs using NFTActor (getUserTokens, transfer, details)
+## 3. 🌯 Interacting with Tokens (getUserTokens, transfer, details)
 
-To interact with the user's NFTs and, for example, trigger a transfer, you need to **initialize/get an NFT actor object**. This is done using the **getNFTActor** method, where you need to pass:
+To interact with the user's Tokens and, for example, trigger a transfer, you need to **initialize/get an Token actor object**. This is done using the **getTokenActor** method, where you need to pass:
 
-- `canisterID`: the Canister ID of the collection you want to interact with (e.g ICPunks)
+- `canisterID`: the Canister ID of the token you want to interact with (e.g XTC)
 - `agent`: and HttpAgent (instantiated with agent-js or Plug)
-- `standard`: a str with the name of the NFT collection's standard (EXT, ICPunks)
+- `standard`: a str with the name of the Token standard (DIP20, EXT)
 
-> (Current standards supported and string name: EXT, ICPunks)
+> (Current standards supported and string name: DIP20, EXT)
 
 ```js
 import { getAllUserNFTs } from '@psychedelic/dab-js'
@@ -187,22 +187,22 @@ export default abstract class NFT {
 }
 ```
 
-As you can see this actor contains the **standard javascript interface** of DAB's **NFT standard wrapper**. It has generic calls to interact with NFTs regardless of their standard (as long as their interface is wrapped in the standard wrapper).
+As you can see this actor contains the **standard javascript interface** of DAB's **Token standard wrapper**. It has generic calls to interact with tokens regardless of their standard (as long as their interface is wrapped in the standard wrapper).
 
-- `getUserTokens`: Fetches an array of all NFTs the passed identity owns in the collection. 
-- `transfer`: Request the transfer of an NFT the user owns to another address.
-- `details`: Returns the details of **any token** in the collection.
+- `getUserTokens`: Fetches an array of all tokens the passed identity owns. 
+- `transfer`: Request the transfer of a token balance the user owns to another address.
+- `details`: Returns the details of **any token**.
 
 
-### getUserTokens - Fetch a User's Owned Tokens in a Specific Collection
+### getUserTokens - Fetch a User's Owned Tokens
 
-This method allows you to fetch an array with the details of all the tokens a user owns in the collection you have **initialized in the actor**.
+This method allows you to fetch an array with the details of all the tokens a user owns in the token you have **initialized in the actor**.
 
 Here, you would need to pass:
 
-- `principal`: a str of the user's Principal ID you want to check for owned NFTs.
+- `principal`: a str of the user's Principal ID you want to check for owned tokens.
 
-> (See that in the variable NFTActor, we are instantiating the NFT actor object, passing a canisterID for the collection we want to interact with, an agent, and the name of the standard as a str).
+> (See that in the variable TokenActor, we are instantiating the Token actor object, passing a canisterID for the token we want to interact with, an agent, and the name of the standard as a str).
 
 ```js
 
@@ -220,7 +220,7 @@ const getUserNFTs = async () => {
 getUserNFTs();
 ```
 
-This returns an array with the following interface, with metadata of each owned NFT:
+This returns an array with the following interface, with metadata of each owned asset:
 
 ```js
 export interface NFTDetails {
@@ -235,16 +235,15 @@ export interface NFTDetails {
 }
 ```
 
-### sendNFT - Request to Transfer a User's NFT to a Different Address
+### sendToken - Request to Transfer a User's Token to a Different Address
 
-This method allows you to request the transfer of an NFT the passed identity owns in the collection you have **initialized in the actor**.
+This method allows you to request the transfer of an Token the passed identity owns in the token you have **initialized in the actor**.
 
 In this method you need to pass:
 
 - `to`: a str of a Principal ID for the destination address.
-- `index`: the index number of the NFT to be transferred.
 
-> (See that in the variable NFTActor, we are instantiating the NFT actor object, passing a canisterID for the collection we want to interact with, an agent, and the name of the standard as a str).
+> (See that in the variable TokenActor, we are instantiating the Token actor object, passing a canisterID for the token we want to interact with, an agent, and the name of the standard as a str).
 
 ```js
 import { Principal } from '@dfinity/principal';
@@ -264,15 +263,15 @@ sendNFT();
 
 The transfer call, **if successful** doesn't return anything after being executed. **If the transaction fails, it will return an error**.
 
-### getTokenDetails - Fetch the Details of Any Specific Token on a Collection.
+### getTokenDetails - Fetch the Details of Any Specific Token.
 
-This method allows you to fetch an array with the details and metadata of any asset on the index of the NFT collection you **initialized in the actor**.
+This method allows you to fetch an array with the details and metadata of any asset on the index of the token you **initialized in the actor**.
 
 In this method, you need to pass:
 
-- `tokenIndex`: the index number for the token in the collection you want the details of.
+- `tokenIndex`: the index number for the token you want the details of.
 
-> (See that in the variable NFTActor, we are instantiating the NFT actor object, passing a canisterID for the collection we want to interact with, an agent, and the name of the standard as a str).
+> (See that in the variable TokenActor, we are instantiating the Token actor object, passing a canisterID for the token we want to interact with, an agent, and the name of the standard as a str).
 
 
 
@@ -292,4 +291,4 @@ const getTokenDetails = async () => {
 getTokenDetails()
 ```
 
-This call returns one object with the metadata of the specific NFT queried.
+This call returns one object with the metadata of the specific token queried.
