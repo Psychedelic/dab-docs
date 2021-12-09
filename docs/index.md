@@ -21,6 +21,8 @@ In v0.3.0, DAB has three registries that developers can integrate with, or submi
 - The Canister List (associate metadata to Canister IDs and auto-surface it in UIs)
 - The Token List (auto-surface tokens in apps and multi-standard support).
 
+----
+
 ## 🎨 The NFT List
 
 **The NFT list** DAB provides a list of NFTs that apps & developers can **consume to surface new NFTs as they are listed in DAB, instead of manually adding them one by one**.
@@ -46,6 +48,8 @@ You can see the current listed NFT collections on our website. **Want to submit 
 - [Submit a new NFT to the list 📫](https://dab-ooo.typeform.com/nft-list)
 
 
+----
+
 ## 💠 The Token List
 
 The Token Registry will work exactly like the NFT List. Any Token can get listed on this open registry, regardless of its standard (DIP20, EXT to start), adding metadata for UIs to surface (name, symbol, image, Canister ID, standard…)
@@ -60,6 +64,8 @@ You can see the current listed tokens on our website. **Want to submit a new Tok
 
 - [View the current Token List📜](https://dab.ooo)
 - [Submit a new Token to the list 📫](https://dab-ooo.typeform.com/token-list)
+
+----
 
 ## 🛢️ The Canister List
 
@@ -90,6 +96,8 @@ To interact with DAB's services you need to use the DAB-js library. Read our doc
 
 - [Read our getting started guide](https://docs.dab.ooo/canister-list/getting-started/)
 * [**DAB-js library - Repository**](https://github.com/psychedelic/dab-js)
+
+
 ---
 
 ## 📬 Coming Next: Dapp lists (Early Applications)
