@@ -25,28 +25,28 @@ markdown_extensions:
 nav:
   - Welcome to DAB 👋: index.md
   - Why use DAB? 🤔: resources/why-dab.md
-  - <b>The NFT List</b> 🎨:
+  - The NFT List 🎨:
     - Getting Started: nft-list/getting-started.md
     - Fetching a User's NFTs: nft-list/getting-started/#2-fetching-all-nfts-the-user-owns-getallusernfts
     - Interacting with NFTs: nft-list/getting-started/#3-interacting-with-nfts-using-nftactor-getusertokens-transfer-details
     - Current NFT List: "https://github.com/Psychedelic/dab/blob/main/registries/nft/list.json"
     - Submit an NFT: "https://dab-ooo.typeform.com/nft-list"  
-  - <b>The Token List</b> 💠:
+  - The Token List 💠:
     - Getting Started: token-list/getting-started.md
     - Fetching a User's Tokens: token-list/getting-started/#2-fetching-all-nfts-the-user-owns-getallusernfts
     - Interacting with Tokens: token-list/getting-started/#3-interacting-with-nfts-using-nftactor-getusertokens-transfer-details
     - Current List: "https://github.com/Psychedelic/dab/blob/main/registries/token/list.json"
     - Submit a Token: "https://dab-ooo.typeform.com/token-list"    
-  - <b>The Canister List</b> 🛢️:
+  - The Canister List 🛢️:
     - Getting Started: canister-list/getting-started.md
     - Single-canister Query: canister-list/getting-started/#2-check-a-single-canisters-metadata-in-the-registry-getcanisterinfo
     - Multi-canister Query: canister-list/getting-started/#3-check-multiple-canisters-metadata-in-the-registry-getmultiplecanisterinfo
     - Current List: "https://github.com/Psychedelic/dab/blob/main/registries/canister_registry/list.md"
     - Submit a Canister: "https://dab-ooo.typeform.com/canister-list"    
-  - <b>Developer Tools</b> 💡: "#"
+  - Developer Tools 💡: "#"
   - DAB-JS Library: https://github.com/Psychedelic/DAB-js/
   - Main DAB Repo: https://github.com/Psychedelic/DAB/
-  - <b>Resources</b> 📚:
+  - Resources 📚:
     - The Internet Computer: "https://dfinity.org/faq"
     - Disclaimer: resources/disclaimer.md
     - Trademark: resources/trademark.md
