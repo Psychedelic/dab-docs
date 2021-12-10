@@ -12,7 +12,7 @@ All right! Ready to integrate DAB's Token list into your app? Your main point of
 
 **Let's do a double click on that last point**. The list is standard-agnostic, meaning Tokens from different standards are available (DIP20, EXT.). To facilitate your integration to them, the **DAB-js library wraps all of the standards listed in DAB** into a **common javascript interface**. Instead of calling different methods, depending on the standard, you use DAB's common interface, and let DAB translate the calls.
 
-> The mainnet canister ID for DAB's Token list is: `aipdg-waaaa-aaaah-aaq5q-cai`
+> The mainnet canister ID for DAB's Token list is: `qwt65-nyaaa-aaaah-qcl4q-cai`
 
 ---
 ## 0. ⚙️ Preparing your environment
