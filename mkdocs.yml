@@ -33,9 +33,8 @@ nav:
     - Submit an NFT: "https://dab-ooo.typeform.com/nft-list"  
   - The Token List 💠:
     - Getting Started: token-list/getting-started.md
-    - Fetching a User's Tokens: token-list/getting-started/#2-fetching-all-nfts-the-user-owns-getallusernfts
-    - Interacting with Tokens: token-list/getting-started/#3-interacting-with-nfts-using-nftactor-getusertokens-transfer-details
-    - Current List: "https://github.com/Psychedelic/dab/blob/main/registries/token/list.json"
+    - Interacting with Tokens: token-list/getting-started/#2-interacting-with-tokens-gettokenactor-transfer-details
+    - Current List: "https://github.com/Psychedelic/dab/blob/main/registries/tokens/list.json"
     - Submit a Token: "https://dab-ooo.typeform.com/token-list"    
   - The Canister List 🛢️:
     - Getting Started: canister-list/getting-started.md

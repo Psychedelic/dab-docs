@@ -62,7 +62,7 @@ Then UIs, apps, and DeFi experiences can consume this list & integrate it using 
 ###  Making New Submissions
 You can see the current listed tokens on our website. **Want to submit a new Token to the list? Use the form below.**
 
-- [View the current Token List📜](https://dab.ooo)
+- [View the current Token List📜](https://github.com/Psychedelic/dab/blob/main/registries/tokens/list.json)
 - [Submit a new Token to the list 📫](https://dab-ooo.typeform.com/token-list)
 
 ----
