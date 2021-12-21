@@ -12,17 +12,16 @@ Welcome to DAB's documentation. DAB is an open internet service for data on the 
 - Visit [DAB's main repository](https://github.com/psychedelic/dab)
 - Visit [DAB-js repository](https://github.com/psychedelic/dab-js)
 
-!!! Important
 
-    DAB is currently in its V0.2.0. This version includes the NFT list and the Canister list. The Token and Dapp list services will follow soon after, but early applications for these lists are still being collected (find the forms in the menu)
+## #️⃣ V0.3.0 - DAB's Current Registries.
 
-
-## #️⃣ V0.2.0 - DAB's Current Registries.
-
-In v0.2.0, DAB has two registries that developers can integrate with, or submit items to:
+In v0.3.0, DAB has three registries that developers can integrate with, or submit items to:
 
 - The NFT List (auto-surface NFTs in apps and multi-standard support).
 - The Canister List (associate metadata to Canister IDs and auto-surface it in UIs)
+- The Token List (auto-surface tokens in apps and multi-standard support).
+
+----
 
 ## 🎨 The NFT List
 
@@ -42,12 +41,31 @@ To interact with DAB's services you need to use the DAB-js library. Read our doc
 - [DAB-js library - Repository](https://github.com/psychedelic/dab-js)
 
 
-### 🖌️ Current NFT List & Making New Submissions
-You can see the current listed NFT collections in the link below. **Want to submit a new NFT collection to the list? Use the form below.**
+### Making New Submissions
+You can see the current listed NFT collections on our website. **Want to submit a new NFT collection to the list? Use the form below.**
 
-- [View the current NFT Collection List📜](https://github.com/Psychedelic/dab/blob/main/registries/nft/list.json)
+- [View the current NFT Collection List📜](https://dab.ooo)
 - [Submit a new NFT to the list 📫](https://dab-ooo.typeform.com/nft-list)
 
+
+----
+
+## 💠 The Token List
+
+The Token Registry will work exactly like the NFT List. Any Token can get listed on this open registry, regardless of its standard (DIP20, EXT to start), adding metadata for UIs to surface (name, symbol, image, Canister ID, standard…)
+
+Then UIs, apps, and DeFi experiences can consume this list & integrate it using DAB-js to integrate and auto-surface and support all tokens on the list for your users (showing their balance, allowing them to interact with them for example to make transfers), as well as anyone that’s added in the future, without having to do per-token or per-standard integrations.
+
+- [Read our getting started guide](https://docs.dab.ooo/token-list/getting-started/)
+- [DAB-js library - Repository](https://github.com/psychedelic/dab-js)
+
+###  Making New Submissions
+You can see the current listed tokens on our website. **Want to submit a new Token to the list? Use the form below.**
+
+- [View the current Token List📜](https://dab.ooo)
+- [Submit a new Token to the list 📫](https://dab-ooo.typeform.com/token-list)
+
+----
 
 ## 🛢️ The Canister List
 
@@ -61,7 +79,7 @@ Apps that show Canister IDs in their UIs/apps can **integrate to the Canister Li
 
 [**View the Canister Registry Source Code**](https://github.com/Psychedelic/dab/tree/main/registries/canister_registry)
 
-### 🖌️ Submitting/Adding a Canister ID to the Canister List
+### Submitting/Adding a Canister ID to the Canister List
 
 Want to submit a new Canister ID to the registry to associate metadat to it, and have integrated apps auto-surface it? Use the form below.
 
@@ -78,10 +96,11 @@ To interact with DAB's services you need to use the DAB-js library. Read our doc
 
 - [Read our getting started guide](https://docs.dab.ooo/canister-list/getting-started/)
 * [**DAB-js library - Repository**](https://github.com/psychedelic/dab-js)
+
+
 ---
 
-## 📬 Coming Next: Token, and Dapp lists (Early Applications)
-After V0.1.0, we'll be working on token, and Dapp registries. These are still in development, **but we are receiving early submissions to be added to these lists on release**.
+## 📬 Coming Next: Dapp lists (Early Applications)
+After V0.3.0, we'll be working on a Dapp registries. This is still in development, **but we are receiving early submissions to be added to these lists on release**.
 
-- [Token List](https://dab-ooo.typeform.com/token-list)
 - [Dapp List](https://dab-ooo.typeform.com/dapp-list)
