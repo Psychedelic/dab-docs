@@ -5,7 +5,9 @@ date: "1"
 
 ![](imgs/main.png)
 
-Welcome to DAB's documentation. DAB is an open internet service for data on the IC. All the data an IC app needs to make a seamless experience, accessible directly on the IC. DAB is an open internet service for NFT, Token, Canister, and Dapp registries.
+Welcome to DAB's documentation. DAB is an open internet service for data on the Internet Computer. All the data an IC app needs to make a seamless experience, accessible directly on the IC. 
+
+DAB keeps tracks its own list of 'verified' registries but encourages anyone to create their own registry by following the Registry Standard.
 
 
 - Visit [our website](https://dab.ooo)
@@ -13,9 +15,9 @@ Welcome to DAB's documentation. DAB is an open internet service for data on the 
 - Visit [DAB-js repository](https://github.com/psychedelic/dab-js)
 
 
-## #️⃣ V0.3.0 - DAB's Current Registries.
+## #️⃣ V0.4.0 - DAB's Current Registries.
 
-In v0.3.0, DAB has three registries that developers can integrate with, or submit items to:
+In v0.4.0, DAB has three registries that developers can integrate with, or submit items to:
 
 - The NFT List (auto-surface NFTs in apps and multi-standard support).
 - The Canister List (associate metadata to Canister IDs and auto-surface it in UIs).
@@ -86,7 +88,7 @@ Want to submit a new Canister ID to the registry to associate metadat to it, and
 - [**Current List**](https://github.com/Psychedelic/dab/blob/main/registries/canister_registry/list.md)
 - [**Submit a new Canister to the list 📫**](https://dab-ooo.typeform.com/canister-list)
 
-For V0.2.0, the review process for submissions is manual and done by the DAB core team; in the future we will automate the process, and migrate to a community-governed and trustless system.
+Currently, the review process for submissions is manual and done by the DAB core team; in the future we will automate the process, and migrate to a community-governed and trustless system.
 
 **We are exploring an automated way of adding Canister IDs and their metadata to the registry**. The main issues are confirming the controller is the one submitting it, and then adding a verification layer to avoid duplicates/phishing/impersonation.
 
@@ -96,7 +98,6 @@ To interact with DAB's services you need to use the DAB-js library. Read our doc
 
 - [Read our getting started guide](https://docs.dab.ooo/canister-list/getting-started/)
 * [**DAB-js library - Repository**](https://github.com/psychedelic/dab-js)
-
 
 ---
 
