@@ -278,3 +278,17 @@ burnXTC()
 ```
 
 This call returns one object with the metadata of the specific token queried.
+
+---
+
+## 3. 👴 Deprecated Methods
+
+As of DAB 0.4.0, we have refactored the way that DAB's architecture is wired. This new architecture introduced the [DAB Registry Standard](../standard/getting-started.md), which we have migrated all of our DAB 0.3.0 registries to follow. 
+
+In doing so, we had to port over the existing registry data to brand new registries. These new registries have new interfaces to ensure they meet the DAB Registry Standard. 
+
+New data structures & interfaces meant a **breaking change** was required to wire up DAB-js to our new registries (and subsequently, any registries that follow the DAB Registry Standard).
+
+Instead of fully breaking all of the current integrations using DAB, we've deprecated the old DAB-js methods and will sometime in the future be removing them entirely. 
+
+Deprecated DAB-js methods are connected to our old registries that do not follow the DAB Registry Standard. These registries will be updated to mirror the content of the new registries until they fully removed. 
