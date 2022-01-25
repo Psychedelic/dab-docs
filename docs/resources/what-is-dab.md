@@ -32,22 +32,20 @@ In the case of the Canister List, UIs can integrate it to surface **metadata for
 
 ## DAB's Architecture - How does it work?
 
-### { diagram image here }
-
 DAB's multi-list architecture can be broken up into two components, the Router & Registries.
 
 ### **The Router**
 
-DAB's Router canister acts as an autonomous management canister whose sole purpose is to keep track of DAB's verified registries. The Router does not have any direct interaction on control over any of these registries, but will allow you to query the data it tracks against the registries (such as canister ID).
+DAB's Router canister acts as an autonomous management canister whose sole purpose is to **keep track of DAB's verified registries & their metadata**. The Router does not have any direct interaction on control over any of these registries, but will allow you to query the data it tracks against the registries (such as canister ID).
 
-The Router canister follows the Registry Standard and can be interacted with just like any other registry. In this sense, the Router can be thought of as a registry of DAB registries.
+The Router canister follows the Registry Standard and can be interacted with just like any other registry. In this way, the Router can be thought of as a registry of DAB registries.
 
 ### **Registries**
 
 DAB Registries is a broad term for any registry that follows DAB's [Registry Standard](../standard/getting-started.md). 
 
-DAB Registries are split up into two camps: verified and unverfied. The only difference between verified & unverified registries is that verified registries have been vetted by the DAB community and deemed in-demand. Being accepted as a DAB verified registry meens more exposure to your registry and provides a stamp of approval from the DAB governing body as a whole. 
+DAB Registries are split up into two camps: verified and unverfied. The only difference between verified & unverified registries is that **verified registries have been vetted by the DAB community and deemed in-demand & trustworthy**. Being accepted as a DAB verified registry meens more exposure to your registry and provides a stamp of approval from the DAB governing body as a whole. 
 
-Newly created registries all start out as unverified be design. This allows *anyone* to be able to create a registry for any purpose, without the need for vetting by an entire community. 
+Newly created registries all start out as unverified be design. This allows **anyone to be able to create a registry** for any purpose, without the need for vetting by an entire community. 
 
 To request verification on your registry, submit this form.
