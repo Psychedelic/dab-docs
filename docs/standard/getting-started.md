@@ -75,10 +75,46 @@ npm install @psychedelic/dab-js@latest
 Find more details about installing versions in the package page [here](https://github.com/Psychedelic/DAB-js/packages/987540)
 
 ### 2. DAB Registry Standard Methods
-In this step, we'll go over the possible methods you can call to any canister that follows the DAB Registry Standard.
+In order to interact with a registry that follows the DAB Registry Standard, we need to create an instance of the [Registry Class]().
 
-{ methods and how to call them here }
+To do so you, you'll have to pass the constructor the canister ID (as a string) of the registry you'd like to interact with. You have an optional parameter to pass in your own agent (this field defaults to an instance of [HttpAgent]()). 
 
+```bash
+import { Registry } from '@psychedelic/dab-js';
 
+const canisterID = 'REGISTRY_ID_HERE';
+
+const createRegistry = (canisterID) => {
+    const my_registry = new Registry(canisterID);
+}
+
+createRegistry();
+```
+
+Once instanciated, you can start to interact with your registry's base methods. 
+
+**name**
+
+```bash
+
+```
+
+**get**
+
+```bash
+
+```
+
+**add**
+
+```bash
+
+```
+
+**remove**
+
+```bash
+
+```
 
 
