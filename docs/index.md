@@ -7,7 +7,7 @@ date: "1"
 
 Welcome to DAB's documentation. DAB is an open internet service for data on the Internet Computer. All the data an IC app needs to make a seamless experience, accessible directly on the IC. 
 
-DAB keeps tracks its own list of 'verified' registries but encourages anyone to create their own registry by following [the DAB Registry Standard](standard/getting-started.md).
+DAB keeps tracks its own list of 'verified' registries but encourages anyone to create their own registry by following the [DAB Registry Standard](standard/getting-started.md).
 
 
 - Visit [our website](https://dab.ooo)
@@ -15,7 +15,7 @@ DAB keeps tracks its own list of 'verified' registries but encourages anyone to 
 - Visit [DAB-js repository](https://github.com/psychedelic/dab-js)
 
 
-## #️⃣ V1.0.0 - DAB's Current Registries.
+## #️⃣ V1.0.0 - DAB's Current Verified Registries.
 
 In v1.0.0, DAB has three registries that developers can integrate with, or submit items to:
 
