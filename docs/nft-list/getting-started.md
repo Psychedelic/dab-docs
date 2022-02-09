@@ -294,16 +294,30 @@ getTokenDetails()
 
 This call returns one object with the metadata of the specific NFT queried.
 
----
+## 4. 📮 Using DAB Registry Standard Methods (name, get, add, remove)
 
-## 4. 👴 Deprecated Methods
+Since the NFT list also follows the DAB Registry standard, we can interact with it's base methods through the use of the `NFTRegistry` object that DAB-js provides.  
 
-As of DAB 0.4.0, we have refactored the way that DAB's architecture is wired. This new architecture introduced the DAB Registry Standard, which we have migrated all of our DAB 0.3.0 registries to follow.
+This pre-made object allows you to skip the step of creating a new instance of the Registry Class for the NFT registry, like we would do in the [Create Your Own Registry](../../standard/getting-started/#2-dab-registry-standard-methods) section.
 
-In doing so, we had to port over the existing registry data to brand new registries. These new registries have new interfaces to ensure they meet the DAB Registry Standard.
+```js
+import { NFTRegistry } from '@psychedelic/dab-js';
 
-New data structures & interfaces meant a breaking change was required to wire up DAB-js to our new registries (and subsequently, any registries that follow the DAB Registry Standard).
+const nft_registry = new NFTRegistry();
+const getId = "PRINCIPAL-ID-HERE";
 
-Instead of fully breaking all of the current integrations using DAB, we've deprecated the old DAB-js methods and will sometime in the future be removing them entirely.
+const testRegistryMethods = async (registry: Registry, getId: string) => {
+    const name = await registry.name();
+    console.log('Registry Name: ', name);
 
-Deprecated DAB-js methods are connected to our old registries that do not follow the DAB Registry Standard. These registries will be updated to mirror the content of the new registries until they fully removed.
+    console.log('Getting metadata for id', getId);
+    const getResponse = await registry.get(getId);
+    console.log('Get Response: ', getResponse);
+};
+
+testRegistryMethods(nft_registry, getId);
+```
+
+You're able to interact with `add` and `remove` in the same way. However, these methods require you to be registry's admin.
+
+

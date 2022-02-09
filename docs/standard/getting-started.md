@@ -2,14 +2,16 @@
 
 To create your own DAB Registry that is able automatically integrate with any programs & applications that interact with DAB Registries (such as DAB-js and the DAB Router), **your canister interface must follow that of the DAB Registry Standard**.
 
-For anyone wondering what this might look like, we have created the DAB Registry Canister. This example canister fully implements the DAB Registry Standard and can act as a guide for you to do so as well.
+For anyone wondering what this might look like, we have created the Template Registry Canister. This example canister fully implements the DAB Registry Standard and can act as a guide for you to do so as well.
 
-- **DAB Registry Standard Candid Interface [ADD LINK]**
-- **DAB Registry Canister [ADD LINK]**
+- **[DAB Template Registry GitHub Repo](https://github.com/Psychedelic/dab/tree/main/template_registry)**
+- **[DAB Template Registry Candid Interface](https://github.com/Psychedelic/dab/blob/main/candid/registry.did)**
 
-Any addition logic you'd like to add is completely up to your descretion, as long as the base methods are met. There **must be no descrepancies between your registry's candid interface and that of the standard.**
+Any addition logic you'd like to add is completely up to your descretion, as long as the base interface methods are met. **There must be no descrepancies between your registry's candid interface and that of the standard.**
+
+---
 ## Registry Standard's Required Interface Methods
-In order to follow the DAB Registry Standard, these four base methods must be met:
+In order to meet the DAB Registry Standard, these four base methods must be met:
 ### 1. Get Registry's Name - name
 Returns the name of your registry canister.
 
@@ -37,6 +39,8 @@ Removes an item and its associated metadata from your registry. Only canister ad
 ```bash
  "remove" : (principal) -> (response)
 ```
+
+---
 
 ## Interacting With Custom Registries
 DAB-js comes with the DAB Registry Standard candid file so that we can interact with the base functionality of *any* registry that follows the DAB Registry Standard. Let's learn how!
@@ -75,46 +79,69 @@ npm install @psychedelic/dab-js@latest
 Find more details about installing versions in the package page [here](https://github.com/Psychedelic/DAB-js/packages/987540)
 
 ### 2. DAB Registry Standard Methods
-In order to interact with a registry that follows the DAB Registry Standard, we need to create an instance of the [Registry Class]().
+In order to interact with a registry that follows the DAB Registry Standard, we need to create an instance of the [Registry Class](). This class's methods allow us to interact with the base functionality that every DAB registry must have. 
 
-To do so you, you'll have to pass the constructor the canister ID (as a string) of the registry you'd like to interact with. You have an optional parameter to pass in your own agent (this field defaults to an instance of [HttpAgent]()). 
+First need to import the `Registry` class from the `@psychedelic/dab-js` library. 
 
-```bash
+Next, we can create an instance of this class by passing in two parameters:
+
+- `agent`: An Http agent, instantiated with agent-js (optional paramet, defaults to DFINITY's agent) <optional>
+- `canisterID`: A string that represents the canister ID of the registry on IC mainnet.
+
+```js
 import { Registry } from '@psychedelic/dab-js';
 
 const canisterID = 'REGISTRY_ID_HERE';
 
 const createRegistry = (canisterID) => {
     const my_registry = new Registry(canisterID);
+    return my_registry
 }
 
-createRegistry();
+const new_registry = createRegistry();
 ```
 
-Once instanciated, you can start to interact with your registry's base methods. 
+To configure your registry to interact with canisters on your local network, pass in a custom agent like so:
 
-**name**
+```js
+import { Registry } from '@psychedelic/dab-js';
 
-```bash
+const canisterID = 'REGISTRY_ID_HERE';
+const localAgent = new HttpAgent({ host: 'https://localhost:8080' }); 
 
+const createLocalRegistry = (canisterID) => {
+    const my_registry = new Registry(canisterID, localAgent);
+    return my_registry
+}
+
+const new_registry = createRegistry();
 ```
 
-**get**
+Once instanciated, you can start to interact with your registry's base **name**, **get**, **add**, and **remove** methods. 
 
-```bash
+Here's an example function to do so:
 
-```
+```js
+const testRegistryMethods = async (registry: Registry, getId: string, addMetadata: Metadata) => {
+    const name = await registry.name();
+    console.log('Registry Name: ', name);
 
-**add**
+    console.log('Adding Entry: ', addMetadata);
+    const addResponse = await registry.add(addMetadata);
+    console.log('Add response', addResponse);
+    
+    console.log('Getting metadata for id', getId);
+    const getResponse = await registry.get(getId);
+    console.log('Get Response: ', getResponse);
 
-```bash
+    console.log('Removing metadata for id', getId);
+    const removeResponse = await registry.remove(getId);
+    console.log('Remove Response: ', removeResponse);
 
-```
-
-**remove**
-
-```bash
-
+    console.log('Getting metadata for deleted id', getId);
+    const emptyResponse = await registry.get(getId);
+    console.log('Removed get response: ', emptyResponse);
+};
 ```
 
 

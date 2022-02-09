@@ -7,7 +7,7 @@ date: "1"
 
 Welcome to DAB's documentation. DAB is an open internet service for data on the Internet Computer. All the data an IC app needs to make a seamless experience, accessible directly on the IC. 
 
-DAB keeps tracks its own list of 'verified' registries but encourages anyone to create their own registry by following [the Registry Standard](standard/getting-started.md).
+DAB keeps tracks its own list of 'verified' registries but encourages anyone to create their own registry by following [the DAB Registry Standard](standard/getting-started.md).
 
 
 - Visit [our website](https://dab.ooo)
@@ -15,9 +15,9 @@ DAB keeps tracks its own list of 'verified' registries but encourages anyone to 
 - Visit [DAB-js repository](https://github.com/psychedelic/dab-js)
 
 
-## #️⃣ V0.4.0 - DAB's Current Registries.
+## #️⃣ V1.0.0 - DAB's Current Registries.
 
-In v0.4.0, DAB has three registries that developers can integrate with, or submit items to:
+In v1.0.0, DAB has three registries that developers can integrate with, or submit items to:
 
 - The NFT List (auto-surface NFTs in apps and multi-standard support).
 - The Canister List (associate metadata to Canister IDs and auto-surface it in UIs).
@@ -102,6 +102,6 @@ To interact with DAB's services you need to use the DAB-js library. Read our doc
 ---
 
 ## 📬 Coming Next: Dapp lists (Early Applications)
-After V0.3.0, we'll be working on a Dapp registries. This is still in development, **but we are receiving early submissions to be added to these lists on release**.
+After V0.3.0, we've been working on a Dapp registries. This is still in development, **but we are receiving early submissions to be added to these lists on release**.
 
 - [Dapp List](https://dab-ooo.typeform.com/dapp-list)
