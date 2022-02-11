@@ -29,8 +29,8 @@ To pull and install from [@Psychedelic](https://github.com/psychedelic) via the 
 
 Once you have those ready, run:
 
-```
-npm login --registry=https://npm.pkg.github.com --scope=@Psychedelic
+```bash
+npm login --registry=https://npm.pkg.github.com --scope=@psychedelic
 ```
 
 > **Note:** You only need to configure this once to install the package!
@@ -45,7 +45,7 @@ You can also setup your npm global settings to fetch from the Github registry ev
 First, you need to install the DAB-js **npm package** into your project.
 
 You can do so from the command line
-```js
+```bash
 npm install @psychedelic/dab-js@latest
 ```
 

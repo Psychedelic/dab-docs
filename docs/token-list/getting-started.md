@@ -26,8 +26,8 @@ To pull and install from [@Psychedelic](https://github.com/psychedelic) via the 
 
 Once you have those ready, run:
 
-```
-npm login --registry=https://npm.pkg.github.com --scope=@Psychedelic
+```bash
+npm login --registry=https://npm.pkg.github.com --scope=@psychedelic
 ```
 
 > **Note:** You only need to configure this once to install the package!
@@ -35,13 +35,13 @@ npm login --registry=https://npm.pkg.github.com --scope=@Psychedelic
 
 You can also setup your npm global settings to fetch from the Github registry everytime it finds a **@Psychdelic** package:
 
-```sh
+```bash
 npm set //npm.pkg.github.com/:_authToken "$PAT"
 ```
 
 ⚠️ Alternatively, a token could be passed to the `.npmrc` as `//npm.pkg.github.com/:_authToken=xxxxxx` but we'd like to keep it clean, tokenless. Here's an example where the `PAT` is an environment variable:
 
-```sh
+```bash
 @psychedelic:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=${PAT}
 ```

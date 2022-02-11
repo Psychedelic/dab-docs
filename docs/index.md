@@ -79,14 +79,14 @@ Apps that show Canister IDs in their UIs/apps can **integrate to the Canister Li
 - It helps give users information to judge whether to trust a canister or not
 - It can help in the future to identify duplicates or impersonations.
 
-[**View the Canister Registry Source Code**](https://github.com/Psychedelic/dab/tree/main/registries/canister_registry)
+[View the Canister Registry Source Code](https://github.com/Psychedelic/dab/tree/main/registries/canister_registry)
 
 ### Submitting/Adding a Canister ID to the Canister List
 
 Want to submit a new Canister ID to the registry to associate metadat to it, and have integrated apps auto-surface it? Use the form below.
 
-- [**Current List**](https://github.com/Psychedelic/dab/blob/main/registries/canister_registry/list.md)
-- [**Submit a new Canister to the list 📫**](https://dab-ooo.typeform.com/canister-list)
+- [Current List](https://github.com/Psychedelic/dab/blob/main/registries/canister_registry/list.md)
+- [Submit a new Canister to the list 📫](https://dab-ooo.typeform.com/canister-list)
 
 Currently, the review process for submissions is manual and done by the DAB core team; in the future we will automate the process, and migrate to a community-governed and trustless system.
 
@@ -97,11 +97,4 @@ Currently, the review process for submissions is manual and done by the DAB core
 To interact with DAB's services you need to use the DAB-js library. Read our documentation or visit the DAB-js repository to get started.
 
 - [Read our getting started guide](https://docs.dab.ooo/canister-list/getting-started/)
-* [**DAB-js library - Repository**](https://github.com/psychedelic/dab-js)
-
----
-
-## 📬 Coming Next: Dapp lists (Early Applications)
-After V0.3.0, we've been working on a Dapp registries. This is still in development, **but we are receiving early submissions to be added to these lists on release**.
-
-- [Dapp List](https://dab-ooo.typeform.com/dapp-list)
+- [DAB-js library - Repository](https://github.com/psychedelic/dab-js)
