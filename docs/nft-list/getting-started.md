@@ -26,8 +26,8 @@ To pull and install from [@Psychedelic](https://github.com/psychedelic) via the 
 
 Once you have those ready, run:
 
-```
-npm login --registry=https://npm.pkg.github.com --scope=@Psychedelic
+```bash
+npm login --registry=https://npm.pkg.github.com --scope=@psychedelic
 ```
 
 > **Note:** You only need to configure this once to install the package!
@@ -35,13 +35,13 @@ npm login --registry=https://npm.pkg.github.com --scope=@Psychedelic
 
 You can also setup your npm global settings to fetch from the Github registry everytime it finds a **@Psychdelic** package:
 
-```sh
+```bash
 npm set //npm.pkg.github.com/:_authToken "$PAT"
 ```
 
 ⚠️ Alternatively, a token could be passed to the `.npmrc` as `//npm.pkg.github.com/:_authToken=xxxxxx` but we'd like to keep it clean, tokenless. Here's an example where the `PAT` is an environment variable:
 
-```sh
+```bash
 @psychedelic:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=${PAT}
 ```
@@ -293,3 +293,31 @@ getTokenDetails()
 ```
 
 This call returns one object with the metadata of the specific NFT queried.
+
+## 4. 📮 Using DAB Registry Standard Methods (name, get, add, remove)
+
+Since the NFT list also follows the DAB Registry standard, we can interact with it's base methods through the use of the `NFTRegistry` object that DAB-js provides.  
+
+This pre-made object allows you to skip the step of creating a new instance of the Registry Class for the NFT registry, like we would do in the [Create Your Own Registry](../../standard/getting-started/#2-dab-registry-standard-methods) section.
+
+```js
+import { NFTRegistry } from '@psychedelic/dab-js';
+
+const nft_registry = new NFTRegistry();
+const getId = "PRINCIPAL-ID-HERE";
+
+const testRegistryMethods = async (registry: Registry, getId: string) => {
+    const name = await registry.name();
+    console.log('Registry Name: ', name);
+
+    console.log('Getting metadata for id', getId);
+    const getResponse = await registry.get(getId);
+    console.log('Get Response: ', getResponse);
+};
+
+testRegistryMethods(nft_registry, getId);
+```
+
+You're able to interact with `add` and `remove` in the same way. However, these methods require you to be registry's admin.
+
+

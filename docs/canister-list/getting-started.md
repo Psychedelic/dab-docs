@@ -29,8 +29,8 @@ To pull and install from [@Psychedelic](https://github.com/psychedelic) via the 
 
 Once you have those ready, run:
 
-```
-npm login --registry=https://npm.pkg.github.com --scope=@Psychedelic
+```bash
+npm login --registry=https://npm.pkg.github.com --scope=@psychedelic
 ```
 
 > **Note:** You only need to configure this once to install the package!
@@ -45,7 +45,7 @@ You can also setup your npm global settings to fetch from the Github registry ev
 First, you need to install the DAB-js **npm package** into your project.
 
 You can do so from the command line
-```js
+```bash
 npm install @psychedelic/dab-js@latest
 ```
 
@@ -100,3 +100,32 @@ console.log(nftsInfo);
 
 
 In contrast to the previous method, this will return an **array of metadata objects** for all the canister IDs you entered.
+
+---
+
+## 4. 📮 Using DAB Registry Standard Methods (name, get, add, remove)
+
+Since the Canister list also follows the DAB Registry standard, we can interact with it's base methods through the use of the `CanisterRegistry` object that DAB-js provides.  
+
+This pre-made object allows you to skip the step of creating a new instance of the Registry Class for the NFT registry, like we would do in the [Create Your Own Registry](../../standard/getting-started/#2-dab-registry-standard-methods) section.
+
+```js
+import { CanisterRegistry } from '@psychedelic/dab-js';
+
+const canister_registry = new CanisterRegistry();
+const getId = "PRINCIPAL-ID-HERE";
+
+const testRegistryMethods = async (registry: Registry, getId: string) => {
+    const name = await registry.name();
+    console.log('Registry Name: ', name);
+
+    console.log('Getting metadata for id', getId);
+    const getResponse = await registry.get(getId);
+    console.log('Get Response: ', getResponse);
+};
+
+testRegistryMethods(canister_registry, getId);
+```
+
+You're able to interact with `add` and `remove` in the same way. However, these methods require you to be registry's admin.
+

@@ -24,27 +24,36 @@ markdown_extensions:
       permalink: true
 nav:
   - Welcome to DAB 👋: index.md
-  - Why use DAB? 🤔: resources/why-dab.md
+  - <b>Overview</b> : "#"
+  - What is DAB? 🤔: resources/what-is-dab.md
+  - <b>Create Your Own Registry</b> : "#"
+  - Registry Standard 🧩: standard/getting-started.md
+  - Interacting With Custom Registries: standard/getting-started/#interacting-with-custom-registries
+  - Request Verification: "https://dab-ooo.typeform.com/to/m8qBZHWu"
+  - <b>Verified Registries</b>: "#"
   - The NFT List 🎨:
     - Getting Started: nft-list/getting-started.md
     - Fetching a User's NFTs: nft-list/getting-started/#2-fetching-all-nfts-the-user-owns-getallusernfts
     - Interacting with NFTs: nft-list/getting-started/#3-interacting-with-nfts-using-nftactor-getusertokens-transfer-details
+    - Registry Standard Methods: nft-list/getting-started/#4-using-dab-registry-standard-methods-name-get-add-remove
     - Current NFT List: "https://github.com/Psychedelic/dab/blob/main/registries/nft/list.json"
     - Submit an NFT: "https://dab-ooo.typeform.com/nft-list"  
   - The Token List 💠:
     - Getting Started: token-list/getting-started.md
     - Interacting with Tokens: token-list/getting-started/#2-interacting-with-tokens-gettokenactor-transfer-details
+    - Registry Standard Methods: token-list/getting-started/#3-using-dab-registry-standard-methods-name-get-add-remove
     - Current List: "https://github.com/Psychedelic/dab/blob/main/registries/tokens/list.json"
     - Submit a Token: "https://dab-ooo.typeform.com/token-list"    
   - The Canister List 🛢️:
     - Getting Started: canister-list/getting-started.md
     - Single-canister Query: canister-list/getting-started/#2-check-a-single-canisters-metadata-in-the-registry-getcanisterinfo
     - Multi-canister Query: canister-list/getting-started/#3-check-multiple-canisters-metadata-in-the-registry-getmultiplecanisterinfo
+    - Registry Standard Methods: canister-list/getting-started/#4-using-dab-registry-standard-methods-name-get-add-remove
     - Current List: "https://github.com/Psychedelic/dab/blob/main/registries/canister_registry/list.md"
     - Submit a Canister: "https://dab-ooo.typeform.com/canister-list"    
-  - Developer Tools 💡:
-    - DAB-JS Library: https://github.com/Psychedelic/DAB-js/
-    - Main DAB Repo: https://github.com/Psychedelic/DAB/
+  - <b>Tools</b> 💡: "#"
+  - DAB-JS Library: https://github.com/Psychedelic/DAB-js/
+  - Main DAB Repo: https://github.com/Psychedelic/DAB/
   - Resources 📚:
     - The Internet Computer: "https://dfinity.org/faq"
     - Disclaimer: resources/disclaimer.md
