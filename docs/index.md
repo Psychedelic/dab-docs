@@ -22,7 +22,7 @@ In v1.0.0, DAB has three registries that developers can integrate with, or submi
 - The NFT List (auto-surface NFTs in apps and multi-standard support).
 - The Canister List (associate metadata to Canister IDs and auto-surface it in UIs).
 - The Token List (auto-surface tokens in apps and multi-standard support).
-- The Address book (save contacts and auto-sync them for users).
+- The Address book (users can save a private contact list to surface in any app).
 
 ----
 
@@ -99,3 +99,14 @@ To interact with DAB's services you need to use the DAB-js library. Read our doc
 
 - [Read our getting started guide](https://docs.dab.ooo/canister-list/getting-started/)
 - [DAB-js library - Repository](https://github.com/psychedelic/dab-js)
+
+----
+
+## 📓 The Address Book
+
+The Address Book canister is a different type of "registry" in DAB. It is a decentralized and private contact list where any user (Principal ID) can store contacts tied to their identity. That way, independently of the dApp they log into, or if they migrate their wallet to a different device or browser, they will always surface the same contact list!
+
+This service can easily be integrated by any IC developer into their dApps or wallets to both show users their universal contact list, or allow them to manage it.
+
+- [Read our getting started guide](https://docs.dab.ooo/address-book/getting-started/)
+- [DAB-js library - Repository](https://github.com/psychedelic/dab-js))
