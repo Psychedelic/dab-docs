@@ -22,6 +22,7 @@ In v1.0.0, DAB has three registries that developers can integrate with, or submi
 - The NFT List (auto-surface NFTs in apps and multi-standard support).
 - The Canister List (associate metadata to Canister IDs and auto-surface it in UIs).
 - The Token List (auto-surface tokens in apps and multi-standard support).
+- The Address book (save contacts and auto-sync them for users).
 
 ----
 
