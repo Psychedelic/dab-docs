@@ -4,11 +4,11 @@ date: "1"
 
 #  📓 Getting Started - Integrate the Address Book
 
-You can integrate the Address Book to your dApp or wallet to both show users all contacts saved in the service for their Principal ID; or allow them to manage their contacts (add/remove).
+You can integrate the Address Book to your dApp or wallet to both show users all contacts saved in the service for their Principal ID; or allow them to manage their contacts (add/remove). A universal address book across all interfaces!
 
 Your main point of interaction for interacting with DAB is the **[DAB-js library](https://github.com/Psychedelic/DAB-js/)**, which we built to provide a simple plug-n-play way of integrating DAB. With it, you will:
 
-> The mainnet canister ID for DAB's Token list is: `i73cm-daaaa-aaaah-abhea-cai`
+> The mainnet canister ID for DAB's Address Book is: `i73cm-daaaa-aaaah-abhea-cai`
 
 ---
 ## 0. ⚙️ Preparing your environment
