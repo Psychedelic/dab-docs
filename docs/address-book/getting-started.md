@@ -68,8 +68,7 @@ export const getAddressBookActor = (agent: HttpAgent) => {
 }
 ```
 
-This should return an actor object with the following interfaces. This actor allows you to interact with the user's address book entries. 
-
+This should return an actor object with the following interfaces. This actor allows you to interact with the user's address book entries in the canister.
 ```js
 interface Value {
   PrincipalId: Principal,
@@ -101,30 +100,15 @@ export default class AddresBookActor {
 
 ### getAddresses - Fetch All of a User's Contacts
 
-This method allows you to fetch an array including all of the user's contact in their address book in DAB.
+This auxiliary method allows you to fetch an array including all of the user's contacts in their address book in DAB.
+This is equivalent to creating an AddressBook actor and calling its `get_all` method.
 
-Here, you would need to pass:
-
-- 
-
-> (See that in the variable AddressBookActor, we are instantiating the Address Book actor object, passing on an agent and the address book's canister).
+Here, you would need to pass an agent (plug's agent or one instantiated with agent-js):
 
 ```js
+import { getAddresses } from '@psychedelic/dab-js'
 
-example needed
-
-import { Principal } from '@dfinity/principal';
-import { getTokenActor } from '@psychedelic/dab-js'
-
-...
-const getUserBalance = async () => {
-  const principal = 'r4rmh-mbkzp-gv2na-yvly3-zcp3r-ocllf-pt3p3-zsri5-6gqvr-stvs2-4ae';
-  const canisterId = 'utozz-siaaa-aaaam-qaaxq-cai';
-  const standard = 'WICP';
-  const TokenActor = getTokenActor({canisterId, agent, standard});
-  const userTokens = await TokenActor.getBalance(Principal.fromText(principal));
-}
-getUserBalance();
+const getUserAddresses = async () => getAddresses(ic?.plug?.agent);
 ```
 
 
@@ -132,37 +116,78 @@ getUserBalance();
 
 This method allows you to add a new contact to the user's address book.
 
-In this method you need to pass:
+In this method you need to pass an object with the following interface:
 
-- `name`: 
-- `description`: 
-- `emoji`: 
-- `value`: 
+```ts
+interface AddressBookValue {
+  PrincipalId: Principal,
+  AccountId: string,
+  Icns: string,
+}
+
+interface Address {
+  name: string,             // Contact's name
+  description: string,      // Contact's description
+  emoji: string,            // Contact's emoji icon
+  value: AddressBookValue,  // Contact's address (one of PrincipalId, AccountId or ICNS)
+}
+```
 
 DAB's address book currently supports **Account IDs, Canister IDs, Principal IDs, and ICNS .icp names** as valid contact addresses.
 
-> (See that in the variable AddressBookActor, we are instantiating the Address Book actor object, passing on an agent and the address book's canister).
 
 ```js
 
-need example
 
 import { Principal } from '@dfinity/principal';
-import { getTokenActor } from '@psychedelic/dab-js'
+import { addAddress } from '@psychedelic/dab-js'
 
 ...
-const send = async () => {
-  const from = 'r4rmh-mbkzp-gv2na-yvly3-zcp3r-ocllf-pt3p3-zsri5-6gqvr-stvs2-4ae';
-  const to = 'j63dc-rpowz-5pt7o-nah2l-z33hc-yacyk-ep3kc-fcxsp-evlxc-p3rv5-2qe'
-  const canisterId = 'utozz-siaaa-aaaam-qaaxq-cai';
-  const standard = 'WICP';
-  const TokenActor = getTokenActor({canisterId, agent, standard});
-  await TokenActor.transfer({from, to, amount: '1.2'});
-}
-send();
+const addAddress = async (contact) => {
+  return addAddress(window?.ic?.plug?.agent, contact);
+};
+
+// ICNS Example
+await addAddress({
+  name: 'nico',
+  description: 'A friend of mine',
+  emoji: 😀,
+  value: {
+    Icns: 'nico.icp',
+  }
+});
+
+// PID Example
+await addAddress({
+  name: 'rocky',
+  description: 'Another friend',
+  emoji: 😀,
+  value: {
+    Principal: Principal.from('xksyk-jrty5-s6ei6-k3cak-wb2mv-5rtv5-atxvn-gnqsm-i6kuh-irkqa-4ae'),
+  }
+});
+
+// AccountId Example
+await addAddress({
+  name: 'Exchange',
+  description: 'My cex address',
+  emoji: 😀,
+  value: {
+    AccountId: '21f2c489e7626ef1af7866ff4fecd15335731657000bea2c1a6ab665111467e8',
+  }
+});
 ```
 
-The call, **if successful**  returns a response. **If the transaction fails, it will return an error**.
+The call returns a `Response` object which has the following format:
+```ts
+export type Response = { 'Ok' : [] | [string] } |
+  { 'Err' : Error };
+```
+
+If the call was **successful**, an `{ Ok: [] | [string] }` object is returned.
+If the call **errored out instead**, you'll get an `{ 'Err' : Error }` with the error cause.
+
+
 
 ### removeAddress - Remove a Contact From the Address Book.
 
@@ -171,25 +196,13 @@ This method allows you to eliminate a contact from a user's address book.
 In this method, you need to pass:
 
 - `addressName`: A string of the name of the contact to be removed.
+- `agent`: An agent, either plug's or one instantiated with agent-js.
 
-> (See that in the variable AddressBookActor, we are instantiating the Address Book actor object, passing on an agent and the address book's canister).
 
-```js
+```ts
+import { removeAddress } from '@psychedelic/dab-js'
 
-example needed
- 
-import { Principal } from '@dfinity/principal';
-import { getTokenActor } from '@psychedelic/dab-js'
-
-...
-const getTokenDetails = async () => {
-  const canisterId = 'utozz-siaaa-aaaam-qaaxq-cai';
-  const standard = 'WICP';
-  const TokenActor = getTokenActor({canisterId, agent, standard});
-
-  const details = await TokenActor.getMetadata();
-}
-getTokenDetails()
+const removeUserAddress = async (addressName: string) => removeAddress(agent, addressName);
 ```
 
 
