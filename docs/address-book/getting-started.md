@@ -58,31 +58,44 @@ Find more details about installing versions in the package page [here](https://g
 
 ## 2. 📓 Interacting with a User's Address Book (getAddressBookActor)
 
-To interact with the user's Address Book and, for example, trigger a transfer, you need to **initialize/get an Address Book actor object**. This is done using the **getAddressBookActor** method, where you need to pass:
+To interact with the user's Address Book and, for example, get your contacts, you need to **initialize/get an Address Book actor object**. This is done using the **getAddressBookActor** method, where you need to pass:
 
 - `agent`: and HttpAgent (instantiated with agent-js or Plug)
-- `canisterId`: The canister ID for the address book i73cm-daaaa-aaaah-abhea-cai
 
 ```js
-
-example needed
-
-import { getAddressBookActor } from '@psychedelic/dab-js'
-
-export const getAddressBookActor = <T={}>({
-  canisterId: string,
-  agent: HttpAgent,
-  standard: string
-}): TokenActor => {
-  return createTokenActor<T>(canisterID, agent, standard);
-};
+export const getAddressBookActor = (agent: HttpAgent) => {
+    return Actor.createActor<AddressBookInterface>(addressBookIDL, { agent, canisterId: CANISTER_ID });
+}
 ```
 
-This should return an actor object with the following interfaces. This actor represents the user whose address book you will interact with.
+This should return an actor object with the following interfaces. This actor allows you to interact with the user's address book entries. 
 
 ```js
+interface Value {
+  PrincipalId: Principal,
+  AccountId: string,
+  Icns: string,
+}
 
-example needed
+interface Address {
+  name: string,
+  description: string,
+  emoji: string,
+  value: Value,
+}
+
+export default class AddresBookActor {
+  agent: HttpAgent;
+  canisterId: string;
+
+  abstract name(): Promise<string>;  
+
+  abstract add(address: Address): Promise<OperationResponse>;
+
+  abstract getAll(): Promise<Array<Address>>;
+
+  abstract remove(entry: string): Promise<void>;
+}
 
 ```
 
